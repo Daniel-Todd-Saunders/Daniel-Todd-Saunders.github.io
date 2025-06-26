@@ -1,0 +1,128 @@
+{
+  "resume": {
+    "profile": {
+      "name": "Daniel Saunders",
+      "image": "https://cdn.glitch.global/ee676be3-ccac-414d-8ee3-1f99540d5d0d/Profile01.jpg?v=1748374019250",
+      "contact": {
+        "phone": {
+          "text": "(240) 971-8845",
+          "href": ""
+        },
+        "email": {
+          "text": "saunders.dt@outlook.com",
+          "href": ""
+        },
+        "github": {
+          "text": "GitHub Portfolio",
+          "href": "https://github.com/DanielSaunders-SoftwarePortfolio"
+        }
+      }
+    },
+    "bio": "I am pursuing a Software Design and Development degree at BYU–Idaho and I have a strong foundation in Python and C++. I have found the software design courses particularly useful because they teach me how to better visualize, communicate, and measure software concepts. I am looking for a job where I can learn to apply these software and coding skills in an industry setting.",
+    "skills": [
+      { "title": "Python", "level": 4, "skill-group": "Programming Languages" },
+      { "title": "VBA", "level": 3, "skill-group": "Programming Languages" },
+      { "title": "C++", "level": 3, "skill-group": "Programming Languages" },
+      { "title": "C#", "level": 2, "skill-group": "Programming Languages" },
+      { "title": "HTML & CSS", "level": 2, "skill-group": "Programming Languages" },
+      { "title": "JavaScript", "level": 3, "skill-group": "Programming Languages" },
+      { "title": "GitHub", "level": 3, "skill-group": "Frameworks and Tools" },
+      { "title": "ASP.NET", "level": 1, "skill-group": "Frameworks and Tools" },
+      { "title": ".NET MAUI", "level": 1, "skill-group": "Frameworks and Tools" },
+      { "title": "OpenGL", "level": 1, "skill-group": "Frameworks and Tools" },
+      { "title": "Visual Studio", "level": 2, "skill-group": "Frameworks and Tools" },
+      { "title": "Android Studio", "level": 1, "skill-group": "Frameworks and Tools" }
+    ],
+    "jobs": [
+      {
+        "title": "Billing Coordinator",
+        "company": "Conservice",
+        "url": "https://www.conservice.com/",
+        "location": "Rexburg, ID",
+        "start": { "month": "10", "year": "2022" },
+        "end": { "month": "03", "year": "2023" },
+        "responsibilities": [
+          "Analyzed and resolved utility discrepancies using Excel, VBA, and custom internal software.",
+          "Developed a VBA macro to refine discrepancy data and make discrepancy reports easier for my team to read."
+        ]
+      },
+      {
+        "title": "IT Support Technician",
+        "company": "Kuubix Global",
+        "url": "https://www.conservice.com/",
+        "location": "Rexburg, ID",
+        "start": { "month": "01", "year": "2022" },
+        "end": { "month": "05", "year": "2022" },
+        "responsibilities": [
+          "Administrated Active Directory and O365 accounts and permissions for all employees.",
+          "Developed and maintained a VBA macro that the Project Managers needed to reformat a report each month."
+        ]
+      },
+      {
+        "title": "Client Care Specialist",
+        "company": "Kuubix Global",
+        "url": "https://www.conservice.com/",
+        "location": "Rexburg, ID",
+        "start": { "month": "06", "year": "2021" },
+        "end": { "month": "01", "year": "2022" },
+        "responsibilities": [
+          "Identified and implemented existing software tools for Salesforce and Microsoft products that streamlined my teams efficiency.",
+          "Developed a task management system using VBA for Excel and Outlook to parse email task notifications and track task assignment and completion."
+        ]
+      },
+      {
+        "title": "Unlicensed Assistive Personnel",
+        "company": "H.A.S Inc.",
+        "location": "Rexburg, ID",
+        "start": { "month": "04", "year": "2020" },
+        "end": { "month": "01", "year": "2021" },
+        "responsibilities": [
+          "Provided independent supervision and compassionate assistance to adults with developmental disabilities.",
+          "Independently maintained a regular log of client status through 15-minute checks, providing essential information for the rest of the care team."
+        ]
+      },
+      {
+        "title": "Lawn Maintenance Technician",
+        "company": "Grover Landscape & Design",
+        "location": "Rexburg, ID",
+        "start": { "month": "07", "year": "2019" },
+        "end": { "month": "11", "year": "2019" },
+        "responsibilities": [
+          "Performed weekly lawn maintenance, including mowing, trimming, fertilizing, and weeding, across various properties.",
+          "Consistently performed demanding physical labor over a 10-12 hour shift, including carrying heavy equipment, extensive walking, and moving other job materials such as fertilizer, gasoline, and grass clippings."
+        ]
+      }
+    ],
+    "courses": [
+      {
+        "title": "Designing Data Structures",
+        "school": "BYU-Idaho",
+        "year": 2025,
+        "descriptions": 
+        [
+          "Developed advanced C++ programming skills by defining my own custom versions of the data structures from the C++ std library.",
+          "Implemented a red-black balanced binary search tree and custom Map and Set classes that used that binary search tree as their underlying data structure."
+        ]
+      },
+      {
+        "title": "Parallelism and Concurrency",
+        "school": "BYU-Idaho",
+        "year": 2024,
+        "descriptions": [
+          "Used threads and processes to improve program efficiency through parallelism and concurrency." ,
+          "Applied these techniques to solve problems such as maze traversal and video frame compilation."
+        ]
+      },
+      {
+        "title": "Inheritance Design",
+        "school": "BYU-Idaho",
+        "year": 2023,
+        "descriptions": 
+        [
+          "Developed polymorphic classes in C++ by applying inheritance principles to build interactive programs.",
+          "Collaborated with a partner to complete a chess game and an Earth orbit simulator, which each used polymorphic objects to increase code readability and abstraction."
+        ]
+      }
+    ]
+  }
+}
