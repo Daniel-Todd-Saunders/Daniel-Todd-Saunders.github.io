@@ -17,41 +17,35 @@ document.addEventListener("DOMContentLoaded", async () =>
 
 function loadAsResume()
 {
-  document.addEventListener("DOMContentLoaded", () =>
-  {
-    try {
-      const resumeContainer = document.createElement("div");
-      
-      resumeContainer.classList.add("resume-container");
+  try {
+    const resumeContainer = document.createElement("div");
+    
+    resumeContainer.classList.add("resume-container");
 
-      resumeContainer.appendChild(buildSidebar());
-      resumeContainer.appendChild(buildMainResume());
+    resumeContainer.appendChild(buildSidebar());
+    resumeContainer.appendChild(buildMainResume());
 
-      document.body.appendChild(resumeContainer);
-    } catch (error) {
-      console.log("Failed to load resume:", error);
-    }
-  });
+    document.body.appendChild(resumeContainer);
+  } catch (error) {
+    console.log("Failed to load resume:", error);
+  }
 }
 
 function loadAsAbout()
 {
-  document.addEventListener("DOMContentLoaded", () =>
-  {
-    try {
-      const resumeContainer = document.createElement("div");
-      
-      resumeContainer.classList.add("resume-container");
+  try {
+    const resumeContainer = document.createElement("div");
+    
+    resumeContainer.classList.add("resume-container");
 
-      resumeContainer.appendChild(buildSidebar());
-      resumeContainer.appendChild(buildMainAbout());
+    resumeContainer.appendChild(buildSidebar());
+    resumeContainer.appendChild(buildMainAbout());
 
 
-      document.body.appendChild(resumeContainer);
-    } catch (error) {
-      console.log("Failed to load About:", error);
-    }
-  });
+    document.body.appendChild(resumeContainer);
+  } catch (error) {
+    console.log("Failed to load About:", error);
+  }
 }
 
 function buildSidebar() {
