@@ -14,7 +14,7 @@ document.addEventListener("load", () =>
   }
 )
 
-async function loadAsResume()
+function loadAsResume()
 {
   try {
     const resumeContainer = document.createElement("div");
@@ -30,7 +30,7 @@ async function loadAsResume()
   }
 }
 
-async function loadAsAbout()
+function loadAsAbout()
 {
   try {
 
