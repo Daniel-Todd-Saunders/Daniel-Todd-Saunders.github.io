@@ -128,6 +128,27 @@
   "about": {
     "summary": "I am pursuing a Software Design and Development degree at BYU–Idaho and I have a strong foundation in Python and C++. I have found the software design courses particularly useful because they teach me how to better visualize, communicate, and measure software concepts. I am looking for a job where I can learn to apply these software and coding skills in an industry setting.",
     "interests": [],
-    "projects": []
+    "projects": [
+      {
+        "name": "Structure Chart Generator",
+        "url": "https://github.com/Daniel-Todd-Saunders/Structure-Chart-Generator-Python",
+        "language": "Python",
+        "descriptions": 
+        [
+          "Parses through a python file and creates a structure chart based on the functions outlined in the python file.",
+          "Outputs an image version of the structure chart based on the provided python file"
+        ]
+      },
+      {
+        "name": "Orbit Simulator",
+        "url": "https://github.com/Daniel-Todd-Saunders/Orbit-Simulator-CPP",
+        "language": "C++",
+        "descriptions": 
+        [
+          "Simulates the orbit of satellites around a 2D earth using advanced physics formulas.",
+          "Simulates a ship the user can use to fly around earth and destroy the satelites with a projectile weapon."
+        ]
+      }
+    ]
   }
 }
