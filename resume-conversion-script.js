@@ -2,13 +2,14 @@ var resume;
 var about;
 
 
-document.addEventListener("load", () => 
+document.addEventListener("DOMContentLoaded", async () => 
   {
-    const response = fetch("about-me.json").then( 
-      console.log("Got file data"));
-    const responseJson = response.json().then(
-      console.log("converted data to json")
-    );
+    const response = await fetch("about-me.json");
+    const responseJson = await response.json();
+
+    resume = responseJson.resume;
+    about = responseJson.about;
+
     resume = responseJson.resume;
     about = responseJson.about;
   }
@@ -48,7 +49,7 @@ function loadAsAbout()
 
       document.body.appendChild(resumeContainer);
     } catch (error) {
-      console.log("Failed to load resume:", error);
+      console.log("Failed to load About:", error);
     }
   });
 }
