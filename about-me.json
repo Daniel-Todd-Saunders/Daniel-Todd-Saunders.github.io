@@ -124,5 +124,10 @@
         ]
       }
     ]
+  },
+  "about": {
+    "summary": "I am pursuing a Software Design and Development degree at BYU–Idaho and I have a strong foundation in Python and C++. I have found the software design courses particularly useful because they teach me how to better visualize, communicate, and measure software concepts. I am looking for a job where I can learn to apply these software and coding skills in an industry setting.",
+    "interests": [],
+    "projects": []
   }
 }

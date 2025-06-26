@@ -1,8 +1,8 @@
-// Define a simple routing function
+
+// Specify redirect paths
 const routes = {
     '/about': 'about.html',
-    '/contact': 'contact.html',
-    // Add more routes as needed
+    '/resume': 'resume.html'
 };
 
 // Get the current path

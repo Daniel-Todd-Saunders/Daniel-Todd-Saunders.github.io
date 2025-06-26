@@ -1,6 +1,28 @@
-document.addEventListener("DOMContentLoaded", async () => {
+async function loadAsResume()
+{
   try {
-    const response = await fetch("rez.json");
+    const response = await fetch("about-me.json");
+    const responseJson = await response.json();
+    const resume = responseJson.resume;
+    const about = responseJson.about;
+
+    const resumeContainer = document.createElement("div");
+    
+    resumeContainer.classList.add("resume-container");
+
+    resumeContainer.appendChild(buildSidebar(resume, about));
+    resumeContainer.appendChild(buildMain(resume));
+
+    document.body.appendChild(resumeContainer);
+  } catch (error) {
+    console.log("Failed to load resume:", error);
+  }
+}
+
+async function loadAsAbout()
+{
+  try {
+    const response = await fetch("about-me.json");
     const responseJson = await response.json();
     const resume = responseJson.resume;
 
@@ -15,13 +37,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     console.log("Failed to load resume:", error);
   }
-});
+}
 
-function buildSidebar(resume) {
+function buildSidebar(resume, about) {
   const sidebar = document.createElement("div");
   sidebar.id = "side-bar";
 
-  sidebar.appendChild(buildProfile(resume));
+  sidebar.appendChild(buildProfile(resume, about));
   // sidebar.appendChild(buildBio(resume));
   sidebar.appendChild(buildSkills(resume));
 
@@ -58,15 +80,15 @@ function buildProfile(resume) {
     profile.appendChild(div);
   }
   
-  profile.appendChild(buildBio(resume));
+  profile.appendChild(buildBio(about));
 
   return profile;
 }
 
-function buildBio(resume) {
+function buildBio(about) {
   const bio = document.createElement("div");
   bio.id = "bio";
-  bio.textContent = resume.bio;
+  bio.textContent = about.summary;
 
   return bio;
 }
