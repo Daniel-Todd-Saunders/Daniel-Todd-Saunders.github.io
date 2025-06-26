@@ -33,7 +33,7 @@ function loadAsResume()
 
 function loadAsAbout()
 {
-  try {
+  try { // this is the about page loader
     const resumeContainer = document.createElement("div");
     
     resumeContainer.classList.add("resume-container");
