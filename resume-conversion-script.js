@@ -25,6 +25,7 @@ async function loadAsAbout()
     const response = await fetch("about-me.json");
     const responseJson = await response.json();
     const resume = responseJson.resume;
+    const about = responseJson.about;
 
     const resumeContainer = document.createElement("div");
     
