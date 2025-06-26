@@ -1,17 +1,28 @@
+var resume;
+var about;
+
+
+document.addEventListener("load", () => 
+  {
+    const response = fetch("about-me.json").then( 
+      console.log("Got file data"));
+    const responseJson = response.json().then(
+      console.log("converted data to json")
+    );
+    resume = responseJson.resume;
+    about = responseJson.about;
+  }
+)
+
 async function loadAsResume()
 {
   try {
-    const response = await fetch("about-me.json");
-    const responseJson = await response.json();
-    const resume = responseJson.resume;
-    const about = responseJson.about;
-
     const resumeContainer = document.createElement("div");
     
     resumeContainer.classList.add("resume-container");
 
-    resumeContainer.appendChild(buildSidebar(resume, about));
-    resumeContainer.appendChild(buildMainResume(resume));
+    resumeContainer.appendChild(buildSidebar());
+    resumeContainer.appendChild(buildMainResume());
 
     document.body.appendChild(resumeContainer);
   } catch (error) {
@@ -22,17 +33,13 @@ async function loadAsResume()
 async function loadAsAbout()
 {
   try {
-    const response = await fetch("about-me.json");
-    const responseJson = await response.json();
-    const resume = responseJson.resume;
-    const about = responseJson.about;
 
     const resumeContainer = document.createElement("div");
     
     resumeContainer.classList.add("resume-container");
 
-    resumeContainer.appendChild(buildSidebar(resume));
-    resumeContainer.appendChild(buildMainAbout(resume, about));
+    resumeContainer.appendChild(buildSidebar());
+    resumeContainer.appendChild(buildMainAbout());
 
 
     document.body.appendChild(resumeContainer);
@@ -41,18 +48,18 @@ async function loadAsAbout()
   }
 }
 
-function buildSidebar(resume, about) {
+function buildSidebar() {
   const sidebar = document.createElement("div");
   sidebar.id = "side-bar";
 
-  sidebar.appendChild(buildProfile(resume, about));
-  // sidebar.appendChild(buildBio(resume));
-  sidebar.appendChild(buildSkills(resume));
+  sidebar.appendChild(buildProfile());
+  // sidebar.appendChild(buildBio());
+  sidebar.appendChild(buildSkills());
 
   return sidebar;
 }
 
-function buildProfile(resume) {
+function buildProfile() {
   const profile = document.createElement("div");
   profile.id = "profile";
   
@@ -87,7 +94,7 @@ function buildProfile(resume) {
   return profile;
 }
 
-function buildBio(about) {
+function buildBio() {
   const bio = document.createElement("div");
   bio.id = "bio";
   bio.textContent = about.summary;
@@ -95,7 +102,7 @@ function buildBio(about) {
   return bio;
 }
 
-function buildSkills(resume) {
+function buildSkills() {
   const other = "Other";
   const skillSection = document.createElement("div");
   skillSection.id = "skills";
@@ -184,7 +191,7 @@ function skillToTag(skill, needsPointer = 1) {
   return skillTag;
 }
 
-function buildMainResume(resume) {
+function buildMainResume() {
   const main = document.createElement("div");
   main.id = "main";
 
@@ -195,7 +202,7 @@ function buildMainResume(resume) {
   return main;
 }
 
-function buildMainAbout(resume, about) {
+function buildMainAbout() {
   const main = document.createElement("div");
   main.id = "main";
 
