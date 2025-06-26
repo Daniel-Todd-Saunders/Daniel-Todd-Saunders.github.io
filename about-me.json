@@ -148,6 +148,66 @@
           "Simulates the orbit of satellites around a 2D earth using advanced physics formulas.",
           "Simulates a ship the user can use to fly around earth and destroy the satelites with a projectile weapon."
         ]
+      },
+      {
+        "name": "Moon Lander",
+        "url": "https://github.com/Daniel-Todd-Saunders/Moon-Lander-Simulator-CPP",
+        "language": "C++",
+        "descriptions": 
+        [
+          "",
+          ""
+        ]
+      },
+      {
+        "name": "Howitzer Artillery Simulator",
+        "url": "https://github.com/Daniel-Todd-Saunders/Howitzer-Artillery-Simulator-CPP",
+        "language": "C++",
+        "descriptions": 
+        [
+          "",
+          ""
+        ]
+      },
+      {
+        "name": "Chess Game",
+        "url": "https://github.com/Daniel-Todd-Saunders/Chess-Game-CPP",
+        "language": "C++",
+        "descriptions": 
+        [
+          "",
+          ""
+        ]
+      },
+      {
+        "name": "Chart Design App 2.0",
+        "url": "https://github.com/Daniel-Todd-Saunders/Chart-Design-App-2.0-Python",
+        "language": "Python",
+        "descriptions": 
+        [
+          "",
+          ""
+        ]
+      },
+      {
+        "name": "Chart Design App 1.0",
+        "url": "https://github.com/Daniel-Todd-Saunders/Chart-Design-App-1.0-Java",
+        "language": "Java",
+        "descriptions": 
+        [
+          "",
+          ""
+        ]
+      },
+      {
+        "name": "This Web Page",
+        "url": "https://github.com/Daniel-Todd-Saunders/Daniel-Todd-Saunders.github.io",
+        "language": "Javascript",
+        "descriptions": 
+        [
+          "",
+          ""
+        ]
       }
     ]
   }
