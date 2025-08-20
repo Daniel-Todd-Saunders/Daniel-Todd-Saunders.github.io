@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () =>
     resume = responseJson.resume;
     about = responseJson.about;
 
-    // loadAsResume();
+    loadAsResume();
   }
 )
 
