@@ -1,5 +1,3 @@
-//This is in beta
-
 var resume;
 var about;
 
@@ -15,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () =>
     resume = responseJson.resume;
     about = responseJson.about;
 
-    loadAsResume();
+    // loadAsResume();
   }
 )
 
