@@ -1,34 +1,69 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
+//This is in beta
+
+var resume;
+var about;
+
+
+document.addEventListener("DOMContentLoaded", async () => 
+  {
     const response = await fetch("about-me.json");
     const responseJson = await response.json();
-    const resume = responseJson.resume;
 
+    resume = responseJson.resume;
+    about = responseJson.about;
+
+    resume = responseJson.resume;
+    about = responseJson.about;
+
+    loadAsResume();
+  }
+)
+
+function loadAsResume()
+{
+  try {
     const resumeContainer = document.createElement("div");
     
     resumeContainer.classList.add("resume-container");
 
-    resumeContainer.appendChild(buildSidebar(resume));
-    resumeContainer.appendChild(buildMain(resume));
+    resumeContainer.appendChild(buildSidebar());
+    resumeContainer.appendChild(buildMainResume());
 
     document.body.appendChild(resumeContainer);
   } catch (error) {
     console.log("Failed to load resume:", error);
   }
-});
+}
 
-function buildSidebar(resume) {
+function loadAsAbout()
+{
+  try { // this is the about page loader
+    const resumeContainer = document.createElement("div");
+    
+    resumeContainer.classList.add("resume-container");
+
+    resumeContainer.appendChild(buildSidebar());
+    resumeContainer.appendChild(buildMainAbout());
+
+
+    document.body.appendChild(resumeContainer);
+  } catch (error) {
+    console.log("Failed to load About:", error);
+  }
+}
+
+function buildSidebar() {
   const sidebar = document.createElement("div");
   sidebar.id = "side-bar";
 
-  sidebar.appendChild(buildProfile(resume));
-  // sidebar.appendChild(buildBio(resume));
-  sidebar.appendChild(buildSkills(resume));
+  sidebar.appendChild(buildProfile());
+  // sidebar.appendChild(buildBio());
+  sidebar.appendChild(buildSkills());
 
   return sidebar;
 }
 
-function buildProfile(resume) {
+function buildProfile() {
   const profile = document.createElement("div");
   profile.id = "profile";
   
@@ -58,20 +93,20 @@ function buildProfile(resume) {
     profile.appendChild(div);
   }
   
-  profile.appendChild(buildBio(resume));
+  profile.appendChild(buildBio(about));
 
   return profile;
 }
 
-function buildBio(resume) {
+function buildBio() {
   const bio = document.createElement("div");
   bio.id = "bio";
-  bio.textContent = resume.bio;
+  bio.textContent = about.summary;
 
   return bio;
 }
 
-function buildSkills(resume) {
+function buildSkills() {
   const other = "Other";
   const skillSection = document.createElement("div");
   skillSection.id = "skills";
@@ -160,12 +195,24 @@ function skillToTag(skill, needsPointer = 1) {
   return skillTag;
 }
 
-function buildMain(resume) {
+function buildMainResume() {
   const main = document.createElement("div");
   main.id = "main";
 
   main.appendChild(buildSection("Education", resume.courses, buildCourse));
   main.appendChild(buildSection("Work Experience", resume.jobs, buildJob));
+  
+
+  return main;
+}
+
+function buildMainAbout() {
+  const main = document.createElement("div");
+  main.id = "main";
+
+  main.appendChild(buildSection("Education", resume.courses, buildCourse));
+  const interests = buildSection("Interests", about.interests,buildInterests);
+  const projects =  buildSection("Projects", about.interests,buildProjects);
   
 
   return main;
@@ -287,5 +334,54 @@ function buildCourse(course) {
 
   return container;
 }
+
+function buildInterests(interest) {
+
+}
+
+function buildProject(project) {
+  const container = document.createElement("div");
+  container.classList.add("project-tile");
+
+  // Header section
+  const head = document.createElement("div");
+  head.classList.add("project-header-section");
+
+  const titleSection = document.createElement("div");
+  titleSection.classList.add("project-title-section");
+
+  const name = document.createElement("div");
+  name.classList.add("project-title");
+  name.textContent = project.name;
+  titleSection.appendChild(name);
+
+  const language = document.createElement("div");
+  language.classList.add("project-language");
+  language.textContent = `Language: ${project.language}`;
+  titleSection.appendChild(language);
+
+  head.appendChild(titleSection);
+
+  const url = document.createElement("div");
+  url.classList.add("project-url");
+  const link = document.createElement("a");
+  link.href = project.url;
+  link.textContent = "View Project";
+  url.appendChild(link);
+  head.appendChild(url);
+
+  container.appendChild(head);
+
+  // Descriptions section
+  project.descriptions.forEach(description => {
+    const descriptionItem = document.createElement("div");
+    descriptionItem.classList.add("project-description");
+    descriptionItem.textContent = description;
+    container.appendChild(descriptionItem);
+  });
+
+  return container;
+}
+
 
 
